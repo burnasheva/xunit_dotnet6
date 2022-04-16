@@ -17,7 +17,8 @@ namespace Prime.UnitTests.Services
 			_primeService = new PrimeService();
 		}
 
-		[Fact]
+		[Trait("Category", "Simple")]
+		[Fact(DisplayName = "GET /api/books returns http status code 200")]
 		public void ReturnFalseGivenValueOf1()
 		{
 			Console.WriteLine("some stdOut text");
@@ -28,6 +29,7 @@ namespace Prime.UnitTests.Services
 			Assert.False(result, $"1 should not be prime");
 		}
 		[Theory]
+		[Trait("Category", "DataTests")]
 		[InlineData(-1)]
 		[InlineData(0)]
 		[InlineData(1)]

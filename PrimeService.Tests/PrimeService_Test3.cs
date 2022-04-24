@@ -13,7 +13,7 @@ namespace Prime.UnitTests.Services
 
 		public PrimeService_Test3(ITestOutputHelper testOutputHelper)
 		{
-			_testOutputHelper = testOutputHelper;
+			_testOutputHelper = testOutputHelper
 			_primeService = new PrimeService();
 		}
 
